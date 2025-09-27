@@ -1,9 +1,29 @@
 {
   "name": "create-zeon-app",
-  "version": "0.0.1",
-  "bin": { "create-zeon-app": "index.js" },
+  "version": "0.1.0",
   "type": "module",
+  "bin": {
+    "create-zeon-app": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "templates"
+  ],
   "license": "MIT",
-  "publishConfig": { "access": "public" },
-  "dependencies": { "fs-extra": "^11.2.0", "prompts": "^2.4.2" }
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "execa": "^9.6.0",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "20.19.17",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2"
+  },
+  "scripts": {
+    "build": "tsup src/cli.ts --dts --format esm --sourcemap --clean",
+    "dev": "tsup src/cli.ts --dts --format esm --watch"
+  }
 }

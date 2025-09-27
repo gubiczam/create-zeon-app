@@ -1,0 +1,12 @@
+{
+  "name": "temp",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "vite", "build": "vite build", "preview": "vite preview" },
+  "devDependencies": { "vite": "^5", "typescript": "^5.9.2", "@types/node": "20.19.17" },
+  "dependencies": {
+    "@usezeon/runtime": "latest",
+    "@usezeon/core": "latest",
+    "@usezeon/vite-plugin": "latest"
+  }
+}
